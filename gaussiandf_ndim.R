@@ -18,7 +18,7 @@ gaussians_ndim <- function(N=2, n0=2000, SD0=1, n1=2000, SD1=1, d=3, empirical=F
   results <- list()
   
   sigma1 <- SD1*diag(N)
-  x1<-mvrnorm(n = n1, mu=c(1,rep(0, N-1)), Sigma=sigma1, empirical=empirical)
+  x1<-mvrnorm(n = n1, mu=c(d,rep(0, N-1)), Sigma=sigma1, empirical=empirical)
   l1 <- rep(1,n1) #class labels
   
   sigma0 <- SD0*diag(N)
